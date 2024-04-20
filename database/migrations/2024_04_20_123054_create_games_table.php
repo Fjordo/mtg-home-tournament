@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('game_number')->unique();
+            $table->json('position')->nullable(false);
+            $table->foreignId('first_blood')->constrained('users')->onDelete('cascade')->nullable(false);
+            $table->foreignId('commander_kill')->constrained('users')->onDelete('cascade');
+            $table->foreignId('multi_kill')->constrained('users')->onDelete('cascade');
+            $table->foreignId('rescue')->constrained('users')->onDelete('cascade');
+            $table->foreignId('aesthetics')->constrained('users')->onDelete('cascade');
+            $table->foreignId('best_play')->constrained('users')->onDelete('cascade');
+            $table->text('comments')->nullable();
             $table->timestamps();
         });
     }

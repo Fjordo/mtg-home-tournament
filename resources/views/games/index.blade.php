@@ -34,7 +34,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="commander_kill" class="mr-2">Commander Kill:</label>
-                <select id="commander_kill" name="commander_kill" class="form-control ml-auto rounded-md" required>
+                <select id="commander_kill" name="commander_kill" class="form-control ml-auto rounded-md">
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -45,7 +45,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="multi_kill" class="mr-2">Multi Kill:</label>
-                <select id="multi_kill" name="multi_kill" class="form-control ml-auto rounded-md" required>
+                <select id="multi_kill" name="multi_kill" class="form-control ml-auto rounded-md">
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -56,7 +56,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="rescue" class="mr-2">Rescue:</label>
-                <select id="rescue" name="rescue" class="form-control ml-auto rounded-md" required>
+                <select id="rescue" name="rescue" class="form-control ml-auto rounded-md">
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -67,7 +67,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="aesthetics" class="mr-2">Aesthetics/Theme:</label>
-                <select id="aesthetics" name="aesthetics" class="form-control ml-auto rounded-md" required>
+                <select id="aesthetics" name="aesthetics" class="form-control ml-auto rounded-md">
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -78,7 +78,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="best_play" class="mr-2">Best Play:</label>
-                <select id="best_play" name="best_play" class="form-control ml-auto rounded-md" required>
+                <select id="best_play" name="best_play" class="form-control ml-auto rounded-md">
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>

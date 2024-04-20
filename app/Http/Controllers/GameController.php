@@ -35,17 +35,28 @@ class GameController extends Controller
         $validated = $request->validate([
             'position' => 'required',
             'first_blood' => 'required',
-            'commander_kill' => 'required',
-            'multi_kill' => 'required',
-            'rescue' => 'required',
-            'aesthetics' => 'required',
-            'best_play' => 'required',
         ]);
 
-        $request->user()->games()->create($validated);
+
+        // Estrai i valori delle posizioni dall'array $request
+        $positions = array_values(array_filter($request->all(), function ($key) {
+            return strpos($key, 'position_') === 0;
+        }, ARRAY_FILTER_USE_KEY));
+
+
+        $game = Game::create([
+            'position' => $positions,
+            'first_blood' => $request->first_blood,
+            'commander_kill' => $request->commander_kill,
+            'multi_kill' => $request->multi_kill,
+            'rescue' => $request->rescue,
+            'aesthetics' => $request->aesthetics,
+            'best_play' => $request->best_play,
+            'comments' => $request->comments,
+        ]);
+        // $request->user()->games()->create($validated);
 
         return redirect(route('game.index'));
- 
     }
 
     /**
