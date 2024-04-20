@@ -8,7 +8,7 @@
                 @foreach($users as $user)
                 <div style="text-align:right">
                     <label>{{$loop->index}}:</label>
-                    <select id="position_{{$loop->index}}" name="position_{{$loop->index}}" class="form-control" required>
+                    <select id="position_{{$loop->index}}" name="position_{{$loop->index}}" class="form-control rounded-md" required>
                         <option value="">Select one</option>
                         @foreach($users as $user)
                         <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -23,7 +23,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="first_blood" class="mr-2">First Blood:</label>
-                <select id="first_blood" name="first_blood" class="form-control ml-auto" required>
+                <select id="first_blood" name="first_blood" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -34,7 +34,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="commander_kill" class="mr-2">Commander Kill:</label>
-                <select id="commander_kill" name="commander_kill" class="form-control ml-auto" required>
+                <select id="commander_kill" name="commander_kill" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -45,7 +45,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="multi_kill" class="mr-2">Multi Kill:</label>
-                <select id="multi_kill" name="multi_kill" class="form-control ml-auto" required>
+                <select id="multi_kill" name="multi_kill" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -56,7 +56,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="rescue" class="mr-2">Rescue:</label>
-                <select id="rescue" name="rescue" class="form-control ml-auto" required>
+                <select id="rescue" name="rescue" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -67,7 +67,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="aesthetics" class="mr-2">Aesthetics/Theme:</label>
-                <select id="aesthetics" name="aesthetics" class="form-control ml-auto" required>
+                <select id="aesthetics" name="aesthetics" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -78,7 +78,7 @@
 
             <div class="form-group flex mb-2">
                 <label for="best_play" class="mr-2">Best Play:</label>
-                <select id="best_play" name="best_play" class="form-control ml-auto" required>
+                <select id="best_play" name="best_play" class="form-control ml-auto rounded-md" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -89,8 +89,11 @@
 
             <br>
 
-            <!-- <textarea name="message" placeholder="{{ __('What\'s on your mind?') }}" class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">{{ old('message') }}</textarea> -->
-            <!-- <x-input-error :messages="$errors->get('message')" class="mt-2" /> -->
+            <label for="commments" class="mr-2">Comments:</label>
+            <div class="form-group flex mb-2">
+                <textarea name="commments" placeholder="{{ __('What\'s has been memorable?') }}" class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">{{ old('comments') }}</textarea>
+                <!-- <x-input-error :messages="$errors->get('message')" class="mt-2" /> -->
+            </div>
 
             <div class="text-center">
                 <x-primary-button class="mt-4">{{ __('Submit') }}</x-primary-button>
