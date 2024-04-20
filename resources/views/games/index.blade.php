@@ -66,14 +66,14 @@
             </div>
 
             <div class="form-group flex mb-2">
-                <label for="estetics" class="mr-2">Estetics/Theme:</label>
-                <select id="estetics" name="estetics" class="form-control ml-auto" required>
+                <label for="aesthetics" class="mr-2">Aesthetics/Theme:</label>
+                <select id="aesthetics" name="aesthetics" class="form-control ml-auto" required>
                     <option value="">Select one</option>
                     @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
                     @endforeach
                 </select>
-                <x-input-error :messages="$errors->get('estetics')" class="mt-2" />
+                <x-input-error :messages="$errors->get('aesthetics')" class="mt-2" />
             </div>
 
             <div class="form-group flex mb-2">

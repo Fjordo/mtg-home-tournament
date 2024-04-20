@@ -38,7 +38,7 @@ class GameController extends Controller
             'commander_kill' => 'required',
             'multi_kill' => 'required',
             'rescue' => 'required',
-            'estetics' => 'required',
+            'aesthetics' => 'required',
             'best_play' => 'required',
         ]);
 
